@@ -50,8 +50,8 @@ elif CurrentShell.Name == "Ubuntu":
 
     hash_map                                = {
         "20.04": None,
-        "18.04": "0f5c314f375ebd5c35b8c1d5e5b161d9efaeff0523bac287f8b4e5b751272f51",
-        "16.04": "87b88d620284d1f0573923e6f7cc89edccf11d19ebaec1cfb83b4f09ac5db09c",
+        "18.04": "b25f592a0c00686f03e3b7db68ca6dc87418f681f4ead4df4745a01d9be63843",
+        "16.04": None,
     }
 
     if version not in hash_map:
@@ -64,7 +64,7 @@ elif CurrentShell.Name == "Ubuntu":
         (
             "Clang - 10.0.0",
             hash_map[version],
-            "http://releases.llvm.org/10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-{}.tar.xz".format(
+            "https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-{}.tar.xz".format(
                 version,
             ),
             [
