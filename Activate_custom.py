@@ -108,21 +108,21 @@ def GetCustomActions(
             else:
                 actions += [CurrentShell.Commands.Set("CXX", "clang++"), CurrentShell.Commands.Set("CC", "clang")]
 
-            # Add the include dirs
-            if not configuration.endswith("-ex"):
-                include_dirs = []
-
-                include_dirs.append(
-                    os.path.join(
-                        clang_dir,
-                        "include",
-                        "c++",
-                        "v1",
-                    ),
-                )
-                assert os.path.isdir(include_dirs[-1]), include_dirs[-1]
-
-                actions += [CurrentShell.Commands.Augment("INCLUDE", include_dirs)]
+            # # Add the include dirs
+            # if not configuration.endswith("-ex"):
+            #     include_dirs = []
+            #
+            #     include_dirs.append(
+            #         os.path.join(
+            #             clang_dir,
+            #             "include",
+            #             "c++",
+            #             "v1",
+            #         ),
+            #     )
+            #     assert os.path.isdir(include_dirs[-1]), include_dirs[-1]
+            #
+            #     actions += [CurrentShell.Commands.Augment("INCLUDE", include_dirs)]
 
             # Add the lib dirs
             lib_dirs = []
