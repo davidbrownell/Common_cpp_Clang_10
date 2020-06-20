@@ -103,13 +103,13 @@ def GetCustomActions(
             ]
 
         if configuration != "python":
-            if CurrentShell.CategoryName == "Windows" and configuration.endswith("-ex"):
+            if CurrentShell.CategoryName == "Windows" and configuration.endswith("_ex"):
                 actions += [CurrentShell.Commands.Set("CXX", "clang-cl"), CurrentShell.Commands.Set("CC", "clang-cl")]
             else:
                 actions += [CurrentShell.Commands.Set("CXX", "clang++"), CurrentShell.Commands.Set("CC", "clang")]
 
             # # Add the include dirs
-            # if not configuration.endswith("-ex"):
+            # if not configuration.endswith("_ex"):
             #     include_dirs = []
             #
             #     include_dirs.append(

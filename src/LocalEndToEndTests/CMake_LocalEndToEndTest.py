@@ -32,8 +32,8 @@ _script_fullpath                            = CommonEnvironment.ThisFullpath()
 _script_dir, _script_name                   = os.path.split(_script_fullpath)
 # ----------------------------------------------------------------------
 
-# Only "-ex"-based configurations work at this time
-if not os.getenv("DEVELOPMENT_ENVIRONMENT_REPOSITORY_CONFIGURATION").endswith("-ex"):
+# Only "_ex"-based configurations work at this time
+if not os.getenv("DEVELOPMENT_ENVIRONMENT_REPOSITORY_CONFIGURATION").endswith("_ex"):
 
     class StandardSuite(unittest.TestCase):
         def test_Noop(self):
