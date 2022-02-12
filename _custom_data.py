@@ -7,7 +7,7 @@
 # |
 # ----------------------------------------------------------------------
 # |
-# |  Copyright David Brownell 2020-21
+# |  Copyright David Brownell 2020-22
 # |  Distributed under the Boost Software License, Version 1.0. See
 # |  accompanying file LICENSE_1_0.txt or copy at
 # |  http://www.boost.org/LICENSE_1_0.txt.
@@ -47,6 +47,10 @@ elif CurrentShell.Name == "Ubuntu":
     import distro
 
     version                                 = distro.version()
+
+    # Hack to see if the 18.04 binaries will work on 20.04
+    if version == "20.04":
+        version = "18.04"
 
     hash_map                                = {
         "20.04": None,
